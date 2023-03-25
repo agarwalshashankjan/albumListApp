@@ -1,0 +1,214 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #b9ffc6;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+input {
+  background-color: #2f793c;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  height: 3%;
+  z-index: 5 !important;
+  position: relative;
+}
+/* --NAVBAR STYLES STARTS-- */
+
+.navbar {
+  background-color: #2f793c;
+  opacity: 0.8;
+  height: 60px;
+  top: 0;
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(6, 25, 2);
+  z-index: 22;
+}
+.navbar h2 {
+  margin: 0;
+  padding: 0;
+  margin-right: 35px;
+}
+.navbar input {
+  height: 20px;
+  margin-right: 15px;
+}
+.navbar button {
+  background: transparent;
+  border: 2px solid #000000;
+  padding: 3px 8px;
+  color: #000000;
+  border-radius: 3px;
+}
+/* --NAVBAR STYLES END-- */
+
+/* --LOADER STYLES STARTS-- */
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #45cf00;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-bottom: 4px solid #f0ff22;
+  border-left: 4px solid transparent;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* --LOADER STYLES ENDS-- */
+
+/* --ALBUMS STYLES STARTS-- */
+.tilesWrap {
+  padding: 0;
+  margin: 50px auto;
+  list-style: none;
+  text-align: center;
+}
+.albumLi {
+  display: inline-block;
+  width: 20%;
+  min-width: 200px;
+  max-width: 230px;
+  padding: 30px 20px 30px;
+  position: relative;
+  vertical-align: top;
+  margin: 10px;
+  font-family: "helvetica", san-serif;
+  min-height: 125px;
+  height: auto;
+  background: #98b109;
+  border: 1px solid #6f9400;
+  text-align: left;
+}
+.albumLi h2 {
+  font-size: 114px;
+  margin: 0;
+  position: absolute;
+  opacity: 0.2;
+  top: 50px;
+  right: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.albumLi h3 {
+  font-size: 20px;
+  color: #b7b7b7;
+  margin-bottom: 5px;
+}
+.albumLi p {
+  font-size: 16px;
+  line-height: 18px;
+  color: #b7b7b7;
+  margin-top: 5px;
+}
+.buttons button {
+  background: transparent;
+  border: 1px solid #b7b7b7;
+  padding: 10px 20px;
+  color: #b7b7b7;
+  border-radius: 3px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-40px);
+  opacity: 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.albumLi:hover button {
+  transform: translateY(5px);
+  opacity: 1;
+}
+
+.albumLi:hover h2 {
+  top: 0px;
+  opacity: 0.6;
+}
+
+.albumLi:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background: #fff;
+  transform: skew(2deg, 2deg);
+}
+.albumLi:after {
+  z-index: 0;
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.02);
+}
+.albumLi:nth-child(1n):before {
+  background: #c9ffbf;
+  background: -webkit-linear-gradient(to right, #00ff62, #c9ffbf);
+  background: linear-gradient(to right, #00ff62, #c9ffbf);
+}
+.albumLi:nth-child(2n):before {
+  background: #577100;
+  background: -webkit-linear-gradient(to right, #e1ff00, #a0f270);
+  background: linear-gradient(to right, #e1ff00, #a0f270);
+}
+.albumLi:nth-child(3n):before {
+  background: #c21500;
+  background: -webkit-linear-gradient(to right, #00c271, #fbff00);
+  background: linear-gradient(to right, #00c271, #fbff00);
+}
+.albumLi:nth-child(4n):before {
+  background: #fc354c;
+  background: -webkit-linear-gradient(to right, #0abfbc, #027d48);
+  background: linear-gradient(to right, #0abfbc, #027d48);
+}
+
+.buttons {
+  /* z-index: 1; */
+  display: flex;
+  justify-content: space-evenly;
+  /* margin-left: -65px; */
+}
+.buttons button {
+  z-index: 1;
+}
+.hide {
+  width: 0;
+  visibility: hidden;
+}
+
+/* --ALBUMS STYLES ENDS-- */
