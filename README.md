@@ -1,5 +1,9 @@
 # Albums list using React.js
 
+## My site is live at https://agarwalshashankjan.github.io/albumListApp/
+
+`Last deployed by @agarwalshashankjan agarwalshashankjan`
+
 **Overview :** A React app for rendering and performing CRUD on jsonplaceholder's album resource.
 
 ## Tech Stack
